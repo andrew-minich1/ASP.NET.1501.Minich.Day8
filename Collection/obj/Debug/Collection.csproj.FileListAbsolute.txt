@@ -1,0 +1,5 @@
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\Collection\bin\Debug\Collection.dll
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\Collection\bin\Debug\Collection.pdb
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\Collection\obj\Debug\Collection.csprojResolveAssemblyReference.cache
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\Collection\obj\Debug\Collection.dll
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\Collection\obj\Debug\Collection.pdb

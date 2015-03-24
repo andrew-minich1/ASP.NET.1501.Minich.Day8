@@ -1,0 +1,8 @@
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\bin\Debug\CollectionConsole.exe.config
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\bin\Debug\CollectionConsole.exe
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\bin\Debug\CollectionConsole.pdb
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\bin\Debug\Collection.dll
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\bin\Debug\Collection.pdb
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\obj\Debug\CollectionConsole.csprojResolveAssemblyReference.cache
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\obj\Debug\CollectionConsole.exe
+c:\users\andrew\EPAM\ASP.NET.1501.Minich.Day8\CollectionConsole\obj\Debug\CollectionConsole.pdb
