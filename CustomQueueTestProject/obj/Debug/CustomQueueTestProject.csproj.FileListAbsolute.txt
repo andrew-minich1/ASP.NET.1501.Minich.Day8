@@ -1,0 +1,7 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\bin\Debug\CustomQueueTestProject.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\bin\Debug\CustomQueueTestProject.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\bin\Debug\CustomCollections.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\bin\Debug\CustomCollections.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\obj\Debug\CustomQueueTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\obj\Debug\CustomQueueTestProject.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomQueueTestProject\obj\Debug\CustomQueueTestProject.pdb

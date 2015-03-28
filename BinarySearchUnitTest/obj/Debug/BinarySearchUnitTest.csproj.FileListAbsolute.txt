@@ -1,0 +1,7 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\bin\Debug\BinarySearchUnitTest.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\bin\Debug\BinarySearchUnitTest.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\bin\Debug\BinarySearch.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\bin\Debug\BinarySearch.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\obj\Debug\BinarySearchUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\obj\Debug\BinarySearchUnitTest.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\BinarySearchUnitTest\obj\Debug\BinarySearchUnitTest.pdb

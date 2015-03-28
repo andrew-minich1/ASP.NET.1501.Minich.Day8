@@ -1,0 +1,5 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomCollections\obj\Debug\CustomCollections.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomCollections\bin\Debug\CustomCollections.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomCollections\bin\Debug\CustomCollections.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomCollections\obj\Debug\CustomCollections.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\CustomCollections\obj\Debug\CustomCollections.pdb

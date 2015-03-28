@@ -1,0 +1,7 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\bin\Debug\Listeners.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\bin\Debug\Listeners.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\bin\Debug\Matrix.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\bin\Debug\Matrix.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\obj\Debug\Listeners.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\obj\Debug\Listeners.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Listeners\obj\Debug\Listeners.pdb

@@ -1,0 +1,12 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\MatrixUI.exe.config
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\MatrixUI.exe
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\MatrixUI.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\Matrix.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\Matrix.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\obj\Debug\MatrixUI.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\obj\Debug\MatrixUI.exe
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\obj\Debug\MatrixUI.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\Listeners.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\Listeners.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\SumMatrix.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\MatrixUI\bin\Debug\SumMatrix.pdb

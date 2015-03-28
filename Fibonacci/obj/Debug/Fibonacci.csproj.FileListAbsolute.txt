@@ -1,0 +1,5 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Fibonacci\bin\Debug\Fibonacci.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Fibonacci\bin\Debug\Fibonacci.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Fibonacci\obj\Debug\Fibonacci.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Fibonacci\obj\Debug\Fibonacci.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\Fibonacci\obj\Debug\Fibonacci.pdb

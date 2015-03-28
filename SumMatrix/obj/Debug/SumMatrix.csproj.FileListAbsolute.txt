@@ -1,0 +1,7 @@
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\obj\Debug\SumMatrix.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\bin\Debug\SumMatrix.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\bin\Debug\SumMatrix.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\bin\Debug\Matrix.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\bin\Debug\Matrix.pdb
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\obj\Debug\SumMatrix.dll
+C:\Users\Andrew\EPAM\ASP.NET.1501.Minich.Day8\SumMatrix\obj\Debug\SumMatrix.pdb
