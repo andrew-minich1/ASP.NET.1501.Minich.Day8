@@ -24,19 +24,54 @@ namespace SumMatrix
             return addMethod;
         }
 
-        public static Matrix<T> SumMatrix<T>(this Matrix<T> matrix, Matrix<T> otherMatrix)
+        public static AbstractMatrix<T> SumMatrix<T>(this AbstractMatrix<T> matrix, AbstractMatrix<T> otherMatrix)
         {
-            if (matrix.Rows != otherMatrix.Rows && matrix.Columns != otherMatrix.Columns) throw new InvalidOperationException();
-            Matrix<T> newMatrix = new Matrix<T>(matrix.Rows, matrix.Columns);
+            AbstractMatrix<T> newMatrix = new SquareMatrix<T>(matrix.Size);
             Func<T, T, T> addMethod = CreateAdd<T>();
-            for (int i = 0; i < matrix.Rows; i++)
+            for (int i = 0; i < matrix.Size; i++)
             {
-                for(int y = 0; y < matrix.Columns; y++)
+                for(int j = 0; j < matrix.Size; j++)
                 {
-                    newMatrix[i, y] = addMethod(matrix[i, y], otherMatrix[i, y]);
+                    newMatrix[i, j] = addMethod(matrix[i, j], otherMatrix[i, j]);
                 }
             }
                 return newMatrix;
+        }
+
+        public static AbstractMatrix<T> SumMatrix<T>(this DiagonalMatrix<T> matrix, DiagonalMatrix<T> otherMatrix)
+        {
+            AbstractMatrix<T> newMatrix = new DiagonalMatrix<T>(matrix.Size);
+            Func<T, T, T> addMethod = CreateAdd<T>();
+            for(int i =0; i<matrix.Size; i++)
+            {
+                newMatrix[i, i] = addMethod(matrix[i,i], otherMatrix[i, i]);
+            }
+            return newMatrix;
+        }
+
+        public static AbstractMatrix<T> SumMatrix<T>(this TriangularMatrix<T> matrix, TriangularMatrix<T> otherMatrix)
+        {
+            AbstractMatrix<T> newMatrix = new TriangularMatrix<T>(matrix.Size);
+            Func<T, T, T> addMethod = CreateAdd<T>();
+            for (int i = 0; i < matrix.Size; i++)
+            {
+                for (int j = 0; j <=i; j++)
+                {
+                    newMatrix[i, i] = addMethod(matrix[i, i], otherMatrix[i, i]);
+                }
+            }
+            return newMatrix;
+        }
+
+        public static AbstractMatrix<T> SumMatrix<T>(this TriangularMatrix<T> matrix, DiagonalMatrix<T> otherMatrix)
+        {
+            AbstractMatrix<T> newMatrix = new TriangularMatrix<T>(matrix.Size);
+            Func<T, T, T> addMethod = CreateAdd<T>();
+            for (int i = 0; i < matrix.Size; i++)
+            {
+                newMatrix[i, i] = addMethod(matrix[i, i], otherMatrix[i, i]);
+            }
+            return newMatrix;
         }
     }
 }
