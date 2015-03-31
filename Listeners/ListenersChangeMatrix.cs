@@ -10,16 +10,16 @@ namespace Listeners
     #region Listeners
     public class ListenersChangeMatrix<T>
     {
-        public ListenersChangeMatrix(Matrix<T> matrix)
+        public ListenersChangeMatrix(AbstractMatrix<T> matrix)
         {
             matrix.Change += ListenerMsg;
         }
         private void ListenerMsg(Object sender, ChangeMatrixEventArgs eventArgs)
         {
-            Console.WriteLine("Change occurred : [{0},{1}]", eventArgs.StringNumber, eventArgs.ColumnNumber);
+            Console.WriteLine("Change occurred : [{0},{1}]", eventArgs.IndexRow, eventArgs.IndexColumn);
         }
 
-        public void Unregister(Matrix<T> matrix)
+        public void Unregister(AbstractMatrix<T> matrix)
         {
             matrix.Change -= ListenerMsg;
         }

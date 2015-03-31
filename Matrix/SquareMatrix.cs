@@ -7,81 +7,18 @@ using System.Collections;
 
 namespace Matrix
 {
-    public class Matrix<T> : IEnumerable<T>
+    public abstract class AbstractMatrix<T> //: IEnumerable<T>
     {
+        protected T[] matrix;
 
-        protected T[,] matrix;
-        public int Rows { get; private set; }
-        public int Columns { get; private set; }
+        public int Size { get; private set; }
 
-        protected Action<int, int, T> SetValue;
-
-        #region Constructor
-        public Matrix(int columns, int rows)
+        protected AbstractMatrix(int size)
         {
-            if (columns < 0 || rows < 0) throw new ArgumentOutOfRangeException();
-            this.matrix = new T[rows, columns];
-            this.Rows = rows;
-            this.Columns = columns;
-            SetValue = this.MakeChanges;
-        } 
-        #endregion
-       
-        #region Indexer
-        public virtual T this[int indexString, int indexColumn]
-        {
-            get
-            {
-                try
-                {
-                    return matrix[indexString, indexColumn];
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-            }
-            set
-            {
-                try
-                {
-
-                    SetValue(indexString, indexColumn, value);
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-            }
+            if (size <= 0) throw new ArgumentOutOfRangeException();
+            this.Size = size;
         }
-        #endregion
-
-        #region virtual
-        protected virtual void MakeChanges(int indexRow, int indexColumn, T newValue)
-        {
-            matrix[indexRow, indexColumn] = newValue;
-            this.MakeChange(indexRow, indexColumn);
-        } 
-        #endregion
-
-        #region IEnumerable
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-        public IEnumerator<T> GetEnumerator()
-        {
-            for (int i = 0; i < Rows; i++)
-            {
-                for (int y = 0; y < Columns; y++)
-                {
-                    yield return this[i, y];
-                }
-
-            }
-        }
-        #endregion
+        public abstract T this[int indexRow, int indexColumn] { get; set; }
 
         #region Event
 
@@ -91,83 +28,117 @@ namespace Matrix
             EventHandler<ChangeMatrixEventArgs> temp = Change;
             temp(this, e);
         }
-        public void MakeChange(int stringNumber, int columnNumber)
+        public void MakeChange(int indexRow, int indexColumn)
         {
-            OnChanged(new ChangeMatrixEventArgs(stringNumber, columnNumber));
+            OnChanged(new ChangeMatrixEventArgs(indexRow, indexColumn));
         }
         #endregion
-
     }
 
-    public class SquareMatrix<T> : Matrix<T>
+    public class SquareMatrix<T> : AbstractMatrix<T>
     {
-        
-        #region Constructor
         public SquareMatrix(int size)
-            : base(size, size) { }
-        #endregion
-
-    }
-
-    public class DiagonalMatrix<T> : SquareMatrix<T>
-    {
-        #region Constructor
-        public DiagonalMatrix(int size)
-            : base(size) { }
-        #endregion
-
-        #region override
-        protected override void MakeChanges(int indexRow, int indexColumn, T newValue)
+            : base(size)
         {
-            if (indexRow != indexColumn) throw new ArgumentOutOfRangeException();
-            matrix[indexRow, indexColumn] = newValue;
-        } 
-        #endregion
+            this.matrix = new T[size * size];
+        }
 
-    }
-
-    public class TriangularMatrix<T> : SquareMatrix<T>
-    {
-        #region Constructor
-        public TriangularMatrix(int size)
-            : base(size) { }
-        #endregion
-
-
-        #region override
-        protected override void MakeChanges(int indexRow, int indexColumn, T newValue)
+        public override T this[int indexRow, int indexColumn]
         {
-            matrix[indexRow, indexColumn] = newValue;
-            this.MakeChange(indexRow, indexColumn);
-            if (indexRow != indexColumn)
+            get
             {
-                matrix[indexColumn, indexRow] = newValue;
-                this.MakeChange(indexColumn, indexRow);
+                if (indexRow < 0 || indexColumn < 0 || indexRow >= Size || indexColumn >= Size) throw new ArgumentOutOfRangeException();
+                return matrix[indexColumn + indexRow * Size];
             }
-        } 
-        #endregion
+            set
+            {
+                if (indexRow < 0 || indexColumn < 0 || indexRow >= Size || indexColumn >= Size) throw new ArgumentOutOfRangeException();
+                matrix[indexColumn + indexRow * Size] = value;
+                this.MakeChange(indexRow, indexColumn);
+            }
+        }
+    }
 
+    public class DiagonalMatrix<T> : AbstractMatrix<T>
+    {
+        public DiagonalMatrix(int size)
+            : base(size)
+        {
+            this.matrix = new T[size];
+        }
 
+        public override T this[int indexRow, int indexColumn]
+        {
+            get
+            {
+                if (indexColumn >= Size || indexRow >= Size || indexColumn < 0 || indexRow < 0) throw new ArgumentOutOfRangeException();
+                if (indexRow != indexColumn) return default(T);
+                else return matrix[indexRow];
+            }
+            set
+            {
+                if (indexRow != indexColumn) throw new ArgumentOutOfRangeException();
+                try
+                {
+                    matrix[indexRow] = value;
+                    this.MakeChange(indexColumn, indexRow);
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+            }
+        }
+    }
+
+    public class TriangularMatrix<T> : AbstractMatrix<T>
+    {
+        public TriangularMatrix(int size)
+            : base(size)
+        {
+            this.matrix = new T[(Size*Size+Size)/2];
+        }
+
+        public override T this[int indexRow, int indexColumn]
+        {
+            get
+            {
+                if (indexColumn >= Size || indexRow >= Size || indexColumn < 0 || indexRow < 0) throw new ArgumentOutOfRangeException();
+
+                if (indexRow.CompareTo(indexColumn) >= 0) return matrix[indexRow * (indexRow + 1) / 2 + indexColumn];
+                else return matrix[indexColumn * (indexColumn + 1) / 2 + indexRow];
+            }
+            set
+            {
+                if (indexColumn >= Size || indexRow >= Size || indexColumn < 0 || indexRow < 0) throw new ArgumentOutOfRangeException();
+
+                if (indexRow.CompareTo(indexColumn) >= 0)  matrix[indexRow * (indexRow + 1) / 2 + indexColumn]=value;
+                else matrix[indexColumn * (indexColumn * (indexColumn + 1) / 2 + indexRow)] = value;
+
+                this.MakeChange(indexColumn, indexRow);
+                if(indexRow!=indexColumn) this.MakeChange(indexRow, indexColumn);
+            }
+        }
     }
 
     public sealed class ChangeMatrixEventArgs : EventArgs
     {
         #region fields
-        private readonly int stringNumber;
-        private readonly int columnNumber;
+        private readonly int indexRow;
+        private readonly int indexColumn;
         #endregion
 
         #region ctor
-        public ChangeMatrixEventArgs(int stringNumber, int columnNumber)
+        public ChangeMatrixEventArgs(int indexRow, int indexColumn)
         {
-            this.stringNumber = stringNumber;
-            this.columnNumber = columnNumber;
+            this.indexRow = indexRow;
+            this.indexColumn = indexColumn;
         }
         #endregion
 
         #region properties
-        public int StringNumber { get { return stringNumber; } }
-        public int ColumnNumber { get { return columnNumber; } }
+        public int IndexRow { get { return indexRow; } }
+        public int IndexColumn { get { return indexColumn; } }
         #endregion
     }
 }
